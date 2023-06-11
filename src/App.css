@@ -28,6 +28,7 @@
 
 .homeContainer {
   z-index: -1;
+  background-color: black;
   background-image: url("/src/images/background.jpeg");
   background-size: cover;
   width: 100vw;
