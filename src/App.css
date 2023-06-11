@@ -28,6 +28,8 @@
 .homeContainer {
   z-index: -1;
   background-color: black;
+  background-image: url("/src/images/background.jpeg");
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -229,7 +231,8 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   background-color: #242582;
   display: flex;
   flex-direction: column;
@@ -243,12 +246,17 @@
 }
 
 .aboutContentWrapper {
-  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   column-gap: 30px;
+}
+
+@media (min-width: 1400px) {
+  .aboutContentWrapper {
+    padding-top: 20vh;
+  }
 }
 
 .myFace {
@@ -264,6 +272,12 @@
   }
 }
 
+@media (min-width: 1400px) {
+  .myFace {
+    margin-top: -50px;
+  }
+}
+
 .aboutTextWrapper {
   max-width: 700px;
   text-align: left;
@@ -271,17 +285,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding-bottom: 5vh;
 }
 
 .aboutHeading {
   font-family: "Nunito", sans-serif;
   font-weight: 400;
+  font-size: 1.4em;
 }
 
 .aboutText {
   font-family: "Nunito", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.2em;
 }
 
 /* Styles for Project page */

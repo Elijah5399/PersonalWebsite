@@ -1,3 +1,5 @@
+//TODO: Deployment on Vercel gets a CORS problem. Find a way to address this.
+
 import * as THREE from "three";
 import React, { useEffect, useState, Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";

@@ -1,5 +1,4 @@
 import * as React from "react";
-import LaptopAnimation from "./LaptopAnimation";
 import "../App.css";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
@@ -15,9 +14,11 @@ const socials = [
 export default function LandingPage() {
   return (
     <div id="home-section" className="homeContainer">
-      <div className="laptopWrap">
+      {/*<div className="laptopWrap">
         <LaptopAnimation />
       </div>
+      */}
+
       <div className="homeBody">
         <div className="homeText">
           <h1
@@ -47,8 +48,9 @@ export default function LandingPage() {
                 fontWeight: "500",
                 fontSize: "20px",
               }}
-            ></p>
-            <TypingAnimation />
+            >
+              <TypingAnimation />
+            </p>
           </span>
           <div className="socialIcons">
             <SocialMedia arr={socials} />

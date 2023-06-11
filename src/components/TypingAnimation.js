@@ -1,4 +1,4 @@
-import TypeWriter from "typewriter-effect/dist/core";
+import Typewriter from "typewriter-effect/dist/core";
 
 const textTyped = [
   "The heart to want change, ",
@@ -17,7 +17,7 @@ const styledText = [
  * shownDur is the period where the text is shown
  */
 export default function TypingAnimation() {
-  var typewriter = new TypeWriter(document.getElementById("textArea"), {
+  var typewriter = new Typewriter(document.getElementById("textArea"), {
     loop: true,
     delay: 75,
   });
