@@ -40,7 +40,7 @@ export default function LandingPage() {
             Full Stack Software Developer
           </h3>
           <span style={{ fontWeight: "bold" }}>
-            <p
+            {/* <p
               id="textArea"
               style={{
                 color: "white",
@@ -48,9 +48,9 @@ export default function LandingPage() {
                 fontWeight: "500",
                 fontSize: "20px",
               }}
-            >
-              <TypingAnimation />
-            </p>
+            ></p> */}
+
+            <TypingAnimation />
           </span>
           <div className="socialIcons">
             <SocialMedia arr={socials} />

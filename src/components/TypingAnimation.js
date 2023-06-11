@@ -1,4 +1,4 @@
-import Typewriter from "typewriter-effect/dist/core";
+import Typewriter from "typewriter-effect";
 
 const textTyped = [
   "The heart to want change, ",
@@ -6,27 +6,24 @@ const textTyped = [
 ];
 
 const styledText = [
-  `The <span style="color: #ef4444"><b>heart &#10084;</b></span> to want change,`,
-  `the <span style="color: #f0abfc"><b>skills &#129504;</b></span> to make it happen.`,
+  `<span style="font-family: 'Roboto', sans-serif; font-weight: 500; font-size: 20px; color: white">The <span style="color: #ef4444;"><b>heart &#10084;</b></span> to want change,</span>`,
+  `<span style="font-family: 'Roboto', sans-serif; font-weight: 500; font-size: 20px; color: white">The <span style="color: #f0abfc"><b>skills &#129504;</b></span> to make it happen.</span>`,
 ];
-/**
- * delay is the time waiting for animation to start
- * typeDur is the time taken to type the text
- * deleteDur is the time taken to delete the text
- * hiddenDur is the period where no text is shown
- * shownDur is the period where the text is shown
- */
+
 export default function TypingAnimation() {
-  var typewriter = new Typewriter(document.getElementById("textArea"), {
-    loop: true,
-    delay: 75,
-  });
-  typewriter
-    .pauseFor(1000)
-    .typeString(styledText[0])
-    .pauseFor(500)
-    .deleteChars(textTyped[0].length + 2)
-    .typeString(styledText[1])
-    .pauseFor(1500)
-    .start();
+  return (
+    <Typewriter
+      options={{ loop: true, autoStart: true }}
+      onInit={(typewriter) => {
+        typewriter
+          .typeString(styledText[0])
+          .pauseFor(500)
+          .deleteAll()
+          .typeString(styledText[1])
+          .pauseFor(500)
+          .deleteAll()
+          .start();
+      }}
+    />
+  );
 }
