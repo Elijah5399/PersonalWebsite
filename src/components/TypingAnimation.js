@@ -6,8 +6,8 @@ const textTyped = [
 ];
 
 const styledText = [
-  `<span style="font-family: 'Roboto', sans-serif; font-weight: 500; font-size: 20px; color: white">The <span style="color: #ef4444;"><b>heart &#10084;</b></span> to want change,</span>`,
-  `<span style="font-family: 'Roboto', sans-serif; font-weight: 500; font-size: 20px; color: white">The <span style="color: #f0abfc"><b>skills &#129504;</b></span> to make it happen.</span>`,
+  `<span style="font-family: 'Roboto', sans-serif; font-weight: 500; font-size: 20px; color: white">The <span style="color: #ef4444;"><b>heart ❤️</b></span> to want change,</span>`,
+  `<span style="font-family: 'Roboto', sans-serif; font-weight: 500; font-size: 20px; color: white">The <span style="color: #f0abfc"><b>skills 🧠</b></span> to make it happen.</span>`,
 ];
 
 export default function TypingAnimation() {
